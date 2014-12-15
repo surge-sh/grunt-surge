@@ -19,9 +19,9 @@ module.exports = function(grunt) {
 
     // Merge the default options with task specific ones
     var options = this.options({
-      // email: null,
       dist: '',
       domain: '',
+      email: '',
       endpoint: '',
       // password: null,
       verbose: false,
