@@ -1,6 +1,6 @@
 # grunt-surge
 
-Publish Grunt projects to the web.
+Easily get static builds online with Grunt.
 
 ## Getting Started
 

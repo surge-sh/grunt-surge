@@ -8,8 +8,8 @@
   "license": "MIT",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
   "contributors":
-  [ "Kenneth Ormandy <kenneth@chloi.io>",
-    "Rob Ellis <rob@chloi.io>"
+  [ "Kenneth Ormandy <kenneth@chloi.io>"
+  , "Rob Ellis <rob@chloi.io>"
   , "Brock Whitten <brock@chloi.io>"
   ],
   "scripts": {

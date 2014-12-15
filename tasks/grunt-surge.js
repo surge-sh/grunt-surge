@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   var surge = require('surge');
   var path  = require('path');
 
-  grunt.registerMultiTask('surge', 'Publishes files with Surge', function() {
+  grunt.registerMultiTask('surge', 'Deploy static Grunt builds with Surge.', function() {
 
     var done = this.async();
 
@@ -27,26 +27,23 @@ module.exports = function(grunt) {
       verbose: false,
     });
 
-    // if(!options.email) {
-    //   grunt.warn('Email is required.');
-    //   done();
-    //   return;
-    // }
-    //
-    // if(!options.password) {
-    //   grunt.warn('Password is required.');
-    //   done();
-    //   return;
-    // }
-
-    var project = path.resolve(options.dist);
+    var project = options.dist;
     var domain = options.domain;
 
-    surge.skin(project, domain, function (err) {
+    grunt.util.spawn({
+      cmd: 'surge',
+      args: [
+        '--project=' + project,
+        '--domain=' + domain
+      ],
+      opts: {
+        stdio: 'inherit'
+      }
+    }, function (err, result, code) {
       if(err) {
         grunt.fail.fatal(err.message);
       }
-      grunt.log.writeln('Deploy initiated…');
+      // grunt.log.writeln('Deployed and live at ' + domain + '.');
       done();
     });
 
