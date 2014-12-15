@@ -21,18 +21,20 @@ module.exports = function(grunt) {
     var options = this.options({
       dist: './dist',
       domain: null,
+      // email: null,
       endpoint: null,
+      // password: null,
       verbose: false,
     });
 
     // if(!options.email) {
-    //   grunt.warn('email is required')
+    //   grunt.warn('Email is required.');
     //   done();
     //   return;
     // }
     //
     // if(!options.password) {
-    //   grunt.warn('password is required')
+    //   grunt.warn('Password is required.');
     //   done();
     //   return;
     // }
