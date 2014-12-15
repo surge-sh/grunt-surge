@@ -33,9 +33,20 @@ module.exports = function(grunt) {
       basic: {
         options: {
           dist: './test/fixtures/',
-          domain: 'grunt-temp-1'
+          domain: 'grunt-test-1'
+        }
+      },
+      defaults: {
+        options: {}
+      },
+      email: {
+        options: {
+          dist: './test/fixtures/',
+          domain: 'grunt-test-3',
+          email: 'kenneth@chloi.io'
         }
       }
+
     },
 
     // Unit tests.
