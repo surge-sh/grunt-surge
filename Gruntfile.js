@@ -39,11 +39,12 @@ module.exports = function(grunt) {
       defaults: {
         options: {}
       },
-      email: {
+      all: {
         options: {
           dist: './test/fixtures/',
           domain: 'grunt-test-3',
-          email: 'kenneth@chloi.io'
+          email: 'kenneth@chloi.io',
+          verbose: true
         }
       }
 

@@ -24,17 +24,19 @@ module.exports = function(grunt) {
       email: '',
       endpoint: '',
       // password: null,
-      verbose: false,
+      verbose: grunt.option('verbose') || false,
     });
 
     var project = options.dist;
     var domain = options.domain;
+    var verbose = options.verbose;
 
     grunt.util.spawn({
       cmd: 'surge',
       args: [
         '--project=' + project,
-        '--domain=' + domain
+        '--domain=' + domain,
+        '--verbose=' + verbose
       ],
       opts: {
         stdio: 'inherit'
