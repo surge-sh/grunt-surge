@@ -30,24 +30,12 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     surge: {
-      basic: {
+      'grunt-test-1': {
         options: {
-          dist: './test/fixtures/',
-          domain: 'grunt-test-1'
-        }
-      },
-      defaults: {
-        options: {}
-      },
-      all: {
-        options: {
-          dist: './test/fixtures/',
-          domain: 'grunt-test-3',
-          email: 'kenneth@chloi.io',
-          verbose: true
+          project: './test/fixtures/',
+          domain: 'grunt-test-1.surge.sh'
         }
       }
-
     },
 
     // Unit tests.
