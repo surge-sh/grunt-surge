@@ -16,7 +16,7 @@ npm install --save-dev grunt-surge
 
 ## Usage
 
-Next, add it to your project’s `gruntfile.js`:
+Next, add it to your project’s `Gruntfile.js`:
 
 ```js
 // Gruntfile.js
@@ -25,15 +25,21 @@ module.exports = function(grunt) {
   grunt.initConfig({
     surge: {
       options: {
-        project: ['./dist/'],
-        domain: 'my-subdomain'
+        project: 'dist/',
+        domain: 'my-project-name.surge.sh'
       }
     }
   });
+
   grunt.loadNpmTasks('grunt-surge');
 };
 ```
-Additional, really good instructions are going to be here soon, I promise! If you need them now, [bug me via email](mailto:kenneth@chloi.io).
+
+Now you can register a Grunt task to deploy the project to the specified domain:
+
+```
+grunt.registerTask('deploy', ['surge']);
+```
 
 ## Contributing
 
