@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
   var surge = require('surge');
   var path  = require('path');
+  var url   = require('url');
 
   grunt.registerMultiTask('surge', 'Deploy static Grunt builds with Surge.', function() {
 
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
 
     // Merge the default options with task specific ones
     var options = this.options({
-      dist: '',
+      project: '',
       domain: '',
       email: '',
       endpoint: '',
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
       verbose: grunt.option('verbose') || false,
     });
 
-    var project = options.dist;
+    var project = options.project;
     var domain = options.domain;
     var verbose = options.verbose;
 
@@ -44,8 +45,9 @@ module.exports = function(grunt) {
     }, function (err, result, code) {
       if(err) {
         grunt.fail.fatal(err.message);
+      } else {
+        grunt.log.oklns('   Deployed to ' + domain);
       }
-      // grunt.log.writeln('Deployed and live at ' + domain + '.');
       done();
     });
 
