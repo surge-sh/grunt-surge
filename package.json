@@ -1,16 +1,16 @@
 {
   "name": "grunt-surge",
-  "description": "Easily get static builds online with Grunt.",
   "version": "0.2.0",
+  "description": "Easily deploy to a CDN with Grunt.",
   "main": "Gruntfile.js",
   "repository": "git://github.com/chloi/grunt-surge.git",
   "homepage": "https://github.com/chloi/grunt-surge",
   "license": "MIT",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
-  "contributors":
-  [ "Kenneth Ormandy <kenneth@chloi.io>"
-  , "Rob Ellis <rob@chloi.io>"
-  , "Brock Whitten <brock@chloi.io>"
+  "contributors": [
+    "Kenneth Ormandy <kenneth@chloi.io>",
+    "Rob Ellis <rob@chloi.io>",
+    "Brock Whitten <brock@chloi.io>"
   ],
   "scripts": {
     "test": "grunt test",
@@ -41,10 +41,11 @@
     "grunt": "~0.4.1"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
+    "grunt": "~0.4.1",
+    "grunt-banner": "^0.3.1",
     "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1"
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0"
   },
   "dependencies": {
     "surge": "^0.5.0"

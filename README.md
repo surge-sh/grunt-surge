@@ -1,6 +1,6 @@
 # grunt-surge
 
-Easily get static builds online with Grunt.
+Easily deploy to a CDN with Grunt.
 
 ## Getting Started
 
@@ -49,4 +49,4 @@ Thanks for considering contributing! There’s information about how to [get sta
 
 [The MIT License (MIT)](LICENSE.md)
 
-Copyright © 2014 [Chloi Inc.](http://chloi.io)
+Copyright © 2014–2015 [Chloi Inc.](http://chloi.io)
