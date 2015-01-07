@@ -1,7 +1,7 @@
 {
   "name": "grunt-surge",
-  "version": "0.2.0",
   "description": "Easily deploy to a CDN with Grunt.",
+  "version": "0.3.0",
   "main": "Gruntfile.js",
   "repository": "git://github.com/chloi/grunt-surge.git",
   "homepage": "https://github.com/chloi/grunt-surge",
