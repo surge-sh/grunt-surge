@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 
 Now you can register a Grunt task to deploy the project to the specified domain:
 
-```
+```js
 grunt.registerTask('deploy', ['surge']);
 ```
 
