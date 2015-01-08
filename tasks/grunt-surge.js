@@ -1,22 +1,27 @@
 /*
- * grunt-surge
- * https://github.com/chloi/grunt-surge
- *
- * Copyright © 2014 Chloi Inc.
- * Available under the MIT license.
- */
+* grunt-surge
+* https://github.com/chloi/grunt-surge
+*
+* Copyright © 2014 Chloi Inc.
+* Available under the MIT license.
+*/
 
 'use strict';
 
 module.exports = function(grunt) {
 
-  var surge = require('surge');
   var path  = require('path');
-  var url   = require('url');
+  var pkg   = require('../package.json');
+  // var surge = require('surge');
+  var surge = path.resolve(path.dirname(require.resolve('surge')), '../../.bin/surge');
 
-  grunt.registerMultiTask('surge', 'Deploy static Grunt builds with Surge.', function() {
+  grunt.registerMultiTask('surge', pkg.description, function() {
 
     var done = this.async();
+
+    if (process.platform === 'win32') {
+      surge.cmd += '.cmd';
+    }
 
     // Merge the default options with task specific ones
     var options = this.options({
@@ -28,29 +33,22 @@ module.exports = function(grunt) {
       verbose: grunt.option('verbose') || false,
     });
 
-    var project = options.project;
-    var domain = options.domain;
-    var verbose = options.verbose;
-
     grunt.util.spawn({
-      cmd: 'surge',
+      cmd: surge,
       args: [
-        '--project=' + project,
-        '--domain=' + domain,
-        '--verbose=' + verbose
+        options.project,
+        options.domain,
+        '--verbose ' + options.verbose
       ],
       opts: {
         stdio: 'inherit'
       }
     }, function (err, result, code) {
-      if(err) {
-        grunt.fail.fatal(err.message);
-      } else {
-        grunt.log.oklns('   Deployed to ' + domain);
-      }
-      done();
+        if(err) {
+          grunt.fail.fatal(err.message);
+        }
+        // grunt.log.writeln('Deployed and live at ' + domain + '.');
+        done();
     });
-
   });
-
 };
