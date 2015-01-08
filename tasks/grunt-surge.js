@@ -2,7 +2,7 @@
 * grunt-surge
 * https://github.com/chloi/grunt-surge
 *
-* Copyright © 2014 Chloi Inc.
+* Copyright © 2014–2015 Chloi Inc.
 * Available under the MIT license.
 */
 
