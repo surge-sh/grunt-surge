@@ -24,9 +24,11 @@ Next, add it to your project’s `Gruntfile.js`:
 module.exports = function(grunt) {
   grunt.initConfig({
     surge: {
-      options: {
-        project: 'dist/',
-        domain: 'my-project-name.surge.sh'
+      'my-project-name': {
+        options: {
+          project: 'dist/',
+          domain: 'my-project-name.surge.sh'
+        }
       }
     }
   });
