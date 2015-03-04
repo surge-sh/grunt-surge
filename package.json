@@ -47,6 +47,6 @@
     "grunt-contrib-nodeunit": "~0.2.0"
   },
   "dependencies": {
-    "surge": "0.7.3"
+    "surge": "0.7.4"
   }
 }
