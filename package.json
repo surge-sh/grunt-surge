@@ -1,7 +1,7 @@
 {
   "name": "grunt-surge",
-  "version": "0.5.1",
   "description": "Publish web apps and static sites to the Surge CDN, through Grunt.",
+  "version": "0.5.2",
   "main": "Gruntfile.js",
   "repository": "git://github.com/chloi/grunt-surge.git",
   "homepage": "https://github.com/chloi/grunt-surge",
