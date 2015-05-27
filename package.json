@@ -3,21 +3,18 @@
   "description": "Publish web apps and static sites to the Surge CDN, through Grunt.",
   "version": "0.5.2",
   "main": "Gruntfile.js",
-  "repository": "git://github.com/chloi/grunt-surge.git",
-  "homepage": "https://github.com/chloi/grunt-surge",
+  "repository": "https://github.com/surge-sh/grunt-surge.git",
+  "homepage": "https://surge.sh/help/deploying-a-grunt-project",
   "license": "MIT",
-  "author": "Kenneth Ormandy <kenneth@chloi.io>",
+  "author": "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
   "contributors": [
-    "Kenneth Ormandy <kenneth@chloi.io>",
-    "Rob Ellis <rob@chloi.io>",
-    "Brock Whitten <brock@chloi.io>"
+    "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
+    "Brock Whitten   <brock@surge.sh>   (http://sintaxi.com)"
+    "Rob Ellis       <rob@chloi.io>"
   ],
   "scripts": {
     "test": "grunt test",
     "start": "grunt"
-  },
-  "bugs": {
-    "url": "https://github.com/chloi/grunt-surge/issues"
   },
   "keywords": [
     "gruntplugin",
