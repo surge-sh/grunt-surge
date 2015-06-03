@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 
   var path  = require('path');
   var pkg   = require('../package.json');
-  // var surge = require('surge');
   var surge = path.resolve(path.dirname(require.resolve('surge')), '../../.bin/surge');
 
   grunt.registerMultiTask('surge', pkg.description, function() {
@@ -49,7 +48,6 @@ module.exports = function(grunt) {
         if(err) {
           grunt.fail.fatal(err.message);
         }
-        // grunt.log.writeln('Deployed and live at ' + domain + '.');
         done();
     });
   });
