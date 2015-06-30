@@ -46,6 +46,6 @@
     "grunt-mkdir": "^0.1.2"
   },
   "dependencies": {
-    "surge": "0.14.1"
+    "surge": "0.14.3"
   }
 }
