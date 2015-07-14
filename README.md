@@ -47,6 +47,7 @@ grunt.registerTask('deploy', ['surge']);
 
 - [@sillygwailo’s Gruntfile](https://gist.github.com/sillygwailo/2216983a15d0c163a01f) will publish to Surge with a notification
 - [@kennethormandy’s Gruntfile for Style and Class](https://github.com/kennethormandy/styleandclass.ca/blob/ko-deploy/Gruntfile.js) will compile a Jekyll site and then publish to Surge
+- [@davethegr8’s starter pack Gruntfile](https://github.com/davethegr8/grunt-surge-starter/blob/master/Gruntfile.js) uses Harp to serve projects locally and automatically precompile Markdown, Sass, CoffeeScript, and more
 - Your Gruntfile here? Just [open an issue](https://github.com/chloi/grunt-surge/issues).
 
 ## Contributing
