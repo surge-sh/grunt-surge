@@ -1,7 +1,7 @@
 {
   "name": "grunt-surge",
   "description": "Publish web apps and static sites to the Surge CDN, through Grunt.",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "main": "Gruntfile.js",
   "repository": "https://github.com/surge-sh/grunt-surge.git",
   "homepage": "https://surge.sh/help/deploying-a-grunt-project",
@@ -46,6 +46,6 @@
     "grunt-mkdir": "^0.1.2"
   },
   "dependencies": {
-    "surge": "0.14.3"
+    "surge": "0.17.7"
   }
 }
